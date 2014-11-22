@@ -3,3 +3,6 @@ imports:
 
 tools:
   external_code_coverage: true
+  php_cs_fixer:
+    config:
+      level: all
