@@ -235,6 +235,7 @@ class FOSHttpCacheExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($container->has('fos_http_cache.user_context.hash_generator'));
         $this->assertTrue($container->has('fos_http_cache.user_context.request_matcher'));
         $this->assertTrue($container->has('fos_http_cache.user_context.role_provider'));
+        $this->assertTrue($container->getDefinition('fos_http_cache.user_context.logout_handler')->isAbstract());
 
         $this->assertEquals(array('fos_http_cache.user_context.role_provider' => array(array())), $container->findTaggedServiceIds('fos_http_cache.user_context_provider'));
     }

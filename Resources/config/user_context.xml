@@ -34,7 +34,7 @@
             <argument type="service" id="security.context" on-invalid="ignore" />
         </service>
 
-        <service id="fos_http_cache.user_context.logout_handler" class="%fos_http_cache.user_context.logout_handler.class%">
+        <service id="fos_http_cache.user_context.logout_handler" class="%fos_http_cache.user_context.logout_handler.class%" abstract="true">
             <argument type="service" id="fos_http_cache.default_proxy_client" />
             <argument />
             <argument />
